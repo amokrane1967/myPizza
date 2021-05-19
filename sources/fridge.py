@@ -68,8 +68,12 @@ class Fridge:
 
     @property
     def ingredient_used(self) -> Dict[str, int]:
+
         return self._count.copy()
 
     def reset_count(self):
         for k in self._count.keys():
             self._count[k] = 0
+
+        return self._count
+
